@@ -1,0 +1,30 @@
+<svg width="325" height="257" viewBox="0 0 325 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_207_5781)">
+<mask id="mask0_207_5781" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="118" y="-1" width="208" height="158">
+<path d="M325.021 157H118.786V-0.0437317H325.021V157Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_207_5781)">
+<path d="M221.904 32.1797C278.854 32.1797 325.021 76.9042 325.021 132.075C325.021 187.245 278.854 231.97 221.904 231.97C164.954 231.97 118.786 187.245 118.786 132.075C118.786 76.9042 164.954 32.1797 221.904 32.1797Z" fill="#FB594C"/>
+</g>
+</g>
+<g clip-path="url(#clip1_207_5781)">
+<mask id="mask1_207_5781" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-23" y="-1" width="207" height="158">
+<path d="M183.235 157H-23V-0.0437317H183.235V157Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_207_5781)">
+<path d="M80.1174 32.1797C137.068 32.1797 183.235 76.9042 183.235 132.075C183.235 187.245 137.068 231.97 80.1174 231.97C23.1673 231.97 -23 187.245 -23 132.075C-23 76.9042 23.1673 32.1797 80.1174 32.1797Z" fill="#FB594C"/>
+</g>
+</g>
+<rect y="129" width="325" height="136" fill="#FB594C"/>
+<path d="M72.5 195.125H34.5C33.1883 195.125 32.125 196.188 32.125 197.5V218.875C32.125 220.187 33.1883 221.25 34.5 221.25H72.5C73.8117 221.25 74.875 220.187 74.875 218.875V197.5C74.875 196.188 73.8117 195.125 72.5 195.125Z" stroke="#F4F4FB" stroke-width="4.75" stroke-linejoin="round"/>
+<path d="M41.625 195.125V185.625C41.625 179.067 46.9417 173.75 53.5 173.75C60.0583 173.75 65.375 179.067 65.375 185.625V195.125" stroke="#F4F4FB" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53.5 204.625V211.75" stroke="#F4F4FB" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<clipPath id="clip0_207_5781">
+<rect width="206" height="210" fill="white" transform="matrix(1 0 0 -1 119 210)"/>
+</clipPath>
+<clipPath id="clip1_207_5781">
+<rect width="206" height="210" fill="white" transform="matrix(1 0 0 -1 -23 210)"/>
+</clipPath>
+</defs>
+</svg>

@@ -9,7 +9,6 @@
 
 body {
 	background-color: var(--color-bg);
-	margin: 20px 40px 40px 40px;
 	font-family: var(--font-main), sans-serif;
 	font-weight: 500;
 	font-size: 16px;
@@ -18,6 +17,10 @@ body {
 
 a {
 	color: var(--color-main);
+}
+
+.container {
+	margin: 20px 40px 40px 40px;
 }
 
 .disabled {
@@ -97,7 +100,7 @@ a {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 120px 193px 0 193px;
+	margin: 120px 193px 292px 193px;
 }
 
 .section-title {
@@ -151,12 +154,19 @@ a {
 	overflow: visible;
 }
 
+.cards-container {
+	display: flex;
+	height: 450px;
+	gap: 20px;
+}
+
 .card {
 	display: flex;
 	padding: 30px 20px 20px 20px;
 	flex-direction: column;
 	align-items: center;
 	height: 100%;
+	min-width: 325px;
 	border-radius: 50px;
 	background: #f4f4fb;
 }
@@ -175,25 +185,190 @@ a {
 	background-image: url(./img/card_image1.svg);
 }
 
-.card.card_second {
+.card.white-title {
 	color: #fff;
+}
+
+.card.bg-red {
 	background-color: #fb594c;
+}
+
+.card.bg-light-brown {
+	background-color: #d0c7b7;
+}
+
+.card.bg-blue {
+	background: #2a5ccf;
+}
+
+.card.bg-dark {
+	background-color: #363640;
+}
+
+.card.card_second {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-image: url(./img/card_image2.svg);
 }
 
 .card.card_third {
-	background-color: #d0c7b7;
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
 	background-image: url(./img/card_image3.svg);
 }
 
 .card.card_fourth {
-	color: #fff;
-	background-color: #363640;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-image: url(./img/card_image2.svg);
+}
+
+.categories {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 234px;
+}
+
+.categories__subtitle {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 25px;
+}
+
+.hot-it-works {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+	margin: 0 212px 157px 212px;
+}
+
+.hot-it-works__title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.card.card_how-second {
+	background-image: url(./img/black_corner.svg);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+}
+
+.card.card_how-third {
+	background-image: url(./img/lock.svg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.first-adopters {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 47px;
+	padding-top: 213px;
+	padding-bottom: 380px;
+	background-color: #363640;
+}
+
+.first-adopters__title {
+	color: #d7ff8d;
+}
+
+.first-adopters__button {
+	padding: 14.58px 24.299px;
+	border-radius: 121.496px;
+	background: #d7ff8d;
+	font-size: 32.399px;
+}
+
+.team-invite {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #1c1c21;
+	padding-bottom: 224px;
+}
+
+.eyes {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 150px;
+}
+
+.eye {
+	position: absolute;
+}
+
+.eye.left {
+	top: 0;
+	left: 30%;
+	position: absolute;
+}
+
+.eye.right {
+	top: 0;
+	right: 10%;
+	position: absolute;
+}
+
+.team-invite__title {
+	color: #d7ff8d;
+	font-size: 40px;
+	margin-bottom: 36px;
+}
+
+.team-invite__form {
+	display: flex;
+	gap: 20px;
+}
+
+.team-invite__input {
+	padding: 14.58px 24.299px;
+	border-radius: 121.496px;
+	background: #fff;
+	font-family: 'Inter Tight';
+	font-size: 32.399px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.team-invite__button {
+	display: flex;
+	padding: 14.58px 33px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 121.496px;
+	background: #d7ff8d;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: #1c1c21;
+	padding: 0 40px 40px 40px;
+}
+
+.footer__button {
+	display: flex;
+	cursor: pointer;
+	padding: 6px 10px;
+	border-radius: 50px;
+	border: 1.5px solid rgba(251, 251, 254, 0.2);
+	color: #fbfbfe;
+	text-transform: capitalize;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 16px;
 }
