@@ -19,7 +19,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	</head>
 	<body>
-		<div class="container">
+		<div class="header-container">
 			<header class="header">
 				<a href="/" class="label">
 					<svg
@@ -100,22 +100,61 @@
 					</svg>
 				</a>
 				<nav class="nav">
-					<ul class="nav__list">
-						<li><a href="">О проекте</a></li>
-						<li><a href="">Как работает</a></li>
-						<li><a href="">Соцсети</a></li>
-						<li><a href="">Первые последователи</a></li>
+					<ul class="nav__list" id="menu">
+						<li>
+							<a href="#about" data-index="0" class="active">О проекте</a>
+						</li>
+						<li><a href="#how-it-works" data-index="1">Как работает</a></li>
+						<li><a href="#socials" data-index="2">Соцсети</a></li>
+						<li>
+							<a href="#first-adopters" data-index="3">Первые последователи</a>
+						</li>
+						<div class="nav__dot" id="dot"></div>
 					</ul>
 				</nav>
-				<div class="header__container">
+				<div class="header__left">
 					<div class="lang-switcher">
 						<button class="disabled">En</button>
 						<button>Ru</button>
 					</div>
-					<a href="tg">Telegram</a>
+					<div class="header__buttons">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="33"
+							height="33"
+							viewBox="0 0 33 33"
+							fill="none"
+						>
+							<rect
+								x="0.75"
+								y="0.75"
+								width="31.5"
+								height="31.5"
+								rx="15.75"
+								stroke="#E1E1E9"
+								stroke-width="1.5"
+							/>
+							<mask id="path-2-inside-1_395_195" fill="white">
+								<path
+									d="M14.1303 8.33589C14.6249 8.19262 14.9079 8.87366 14.5718 9.26389C13.5924 10.4013 13 11.8813 13 13.5002C13.0001 17.09 15.9102 20.0002 19.5 20.0002C21.1195 20.0002 22.5994 19.4071 23.7368 18.4269C24.1269 18.0907 24.8079 18.3734 24.6647 18.8681C23.6396 22.4103 20.3727 25.0002 16.5 25.0002C11.8056 25.0002 8 21.1946 8 16.5002C8 12.6282 10.589 9.36165 14.1303 8.33589Z"
+								/>
+							</mask>
+							<path
+								d="M14.1303 8.33589C14.6249 8.19262 14.9079 8.87366 14.5718 9.26389C13.5924 10.4013 13 11.8813 13 13.5002C13.0001 17.09 15.9102 20.0002 19.5 20.0002C21.1195 20.0002 22.5994 19.4071 23.7368 18.4269C24.1269 18.0907 24.8079 18.3734 24.6647 18.8681C23.6396 22.4103 20.3727 25.0002 16.5 25.0002C11.8056 25.0002 8 21.1946 8 16.5002C8 12.6282 10.589 9.36165 14.1303 8.33589Z"
+								fill="#1C1C21"
+							/>
+							<path
+								d="M13 13.5002H11.5V13.5002L13 13.5002ZM23.7368 18.4269L22.7575 17.2907L23.7368 18.4269ZM14.5718 9.26389L13.4352 8.28511L14.5718 9.26389ZM14.5718 9.26389L13.4352 8.28511C12.2304 9.68421 11.5 11.5083 11.5 13.5002H13H14.5C14.5 12.2542 14.9544 11.1184 15.7085 10.2427L14.5718 9.26389ZM13 13.5002L11.5 13.5002C11.5001 17.9183 15.0817 21.5002 19.5 21.5002V20.0002V18.5002C16.7387 18.5002 14.5001 16.2616 14.5 13.5002L13 13.5002ZM19.5 20.0002V21.5002C21.4928 21.5002 23.3171 20.7688 24.716 19.5631L23.7368 18.4269L22.7575 17.2907C21.8818 18.0454 20.7461 18.5002 19.5 18.5002V20.0002ZM24.6647 18.8681L23.2239 18.4511C22.3793 21.3692 19.6869 23.5002 16.5 23.5002V25.0002V26.5002C21.0584 26.5002 24.8998 23.4514 26.1056 19.2851L24.6647 18.8681ZM16.5 25.0002V23.5002C12.634 23.5002 9.5 20.3662 9.5 16.5002H8H6.5C6.5 22.023 10.9772 26.5002 16.5 26.5002V25.0002ZM8 16.5002H9.5C9.5 13.3138 11.6303 10.6217 14.5476 9.77666L14.1303 8.33589L13.713 6.89511C9.54774 8.1016 6.5 11.9426 6.5 16.5002H8ZM23.7368 18.4269L24.716 19.5631C24.4124 19.8249 24.043 19.8198 23.7853 19.7039C23.6425 19.6396 23.4531 19.5075 23.3198 19.2645C23.1727 18.9963 23.1529 18.6962 23.2239 18.4511L24.6647 18.8681L26.1056 19.2851C26.2481 18.7927 26.1969 18.2717 25.9502 17.8218C25.7173 17.3973 25.36 17.1227 25.0162 16.968C24.3562 16.6711 23.4513 16.6927 22.7575 17.2907L23.7368 18.4269ZM14.5718 9.26389L15.7085 10.2427C16.3061 9.54864 16.3274 8.64374 16.0303 7.98399C15.8755 7.6402 15.6009 7.28303 15.1763 7.05027C14.7264 6.80362 14.2054 6.75247 13.713 6.89511L14.1303 8.33589L14.5476 9.77666C14.3025 9.84767 14.0023 9.82792 13.7341 9.68087C13.4912 9.54771 13.359 9.35833 13.2948 9.21566C13.1789 8.95818 13.1736 8.58891 13.4352 8.28511L14.5718 9.26389Z"
+								fill="#1C1C21"
+								mask="url(#path-2-inside-1_395_195)"
+							/>
+						</svg>
+						<a href="tg" class="header__button">Telegram</a>
+					</div>
 				</div>
 			</header>
-
+		</div>
+		<div class="container">
 			<main>
 				<section class="hero-section">
 					<h2 class="subtitle disabled">
@@ -204,33 +243,106 @@
 						объявлений<br />
 						внутри тelegram
 					</h1>
-					<img
-						class="app-preview"
-						src="./img/iPhone 16.png"
-						alt="mobile app preview"
-					/>
+					<div class="preview-container">
+						<img
+							class="app-preview"
+							src="./img/iPhone 16.png"
+							alt="mobile app preview"
+						/>
 
-					<!-- <div class="ad-bullet">
-						<img src="./img/boots.png" alt="" />
-						<div class="price">
+						<h3 class="categories__subtitle">coming soon...</h3>
+					</div>
+					<div class="ad-bullet-container">
+						<div class="ad-bullet">
+							<img class="ad-bullet__img" src="./img/boots.png" alt="" />
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="13"
-								height="13"
-								viewBox="0 0 13 13"
+								width="42"
+								height="42"
+								viewBox="0 0 42 42"
 								fill="none"
+								class="ad-bullet__crypto"
 							>
-								<path
-									d="M10.8895 0H2.11004C0.495814 0 -0.527321 1.74122 0.284796 3.14884L5.70313 12.5401C6.05671 13.1533 6.94279 13.1533 7.29637 12.5401L12.7158 3.14884C13.5268 1.74347 12.5037 0 10.8906 0H10.8895ZM5.69872 9.7238L4.5187 7.44008L1.67143 2.34781C1.4836 2.02188 1.7156 1.60422 2.10894 1.60422H5.69762V9.7249L5.69872 9.7238ZM11.3259 2.34671L8.4797 7.44118L7.29968 9.7238V1.60312H10.8884C11.2817 1.60312 11.5137 2.02078 11.3259 2.34671Z"
-									fill="#1C1C21"
-								/></svg>
+								<g clip-path="url(#clip0_355_4351)">
+									<path
+										d="M21 42C32.598 42 42 32.598 42 21C42 9.402 32.598 0 21 0C9.402 0 0 9.402 0 21C0 32.598 9.402 42 21 42Z"
+										fill="#0098EA"
+									/>
+									<path
+										d="M28.1699 11.7207H13.8286C11.1918 11.7207 9.52045 14.5651 10.8471 16.8645L19.698 32.2056C20.2755 33.2073 21.723 33.2073 22.3005 32.2056L31.1532 16.8645C32.478 14.5688 30.8067 11.7207 28.1717 11.7207H28.1699ZM19.6908 27.605L17.7632 23.8745L13.1121 15.556C12.8053 15.0236 13.1843 14.3413 13.8268 14.3413H19.689V27.6068L19.6908 27.605ZM28.8828 15.5542L24.2335 23.8763L22.3059 27.605V14.3395H28.1681C28.8106 14.3395 29.1896 15.0218 28.8828 15.5542Z"
+										fill="white"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_355_4351">
+										<rect width="42" height="42" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+							<div class="price">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="13"
+									height="13"
+									viewBox="0 0 13 13"
+									fill="none"
+								>
+									<path
+										d="M10.8895 0H2.11004C0.495814 0 -0.527321 1.74122 0.284796 3.14884L5.70313 12.5401C6.05671 13.1533 6.94279 13.1533 7.29637 12.5401L12.7158 3.14884C13.5268 1.74347 12.5037 0 10.8906 0H10.8895ZM5.69872 9.7238L4.5187 7.44008L1.67143 2.34781C1.4836 2.02188 1.7156 1.60422 2.10894 1.60422H5.69762V9.7249L5.69872 9.7238ZM11.3259 2.34671L8.4797 7.44118L7.29968 9.7238V1.60312H10.8884C11.2817 1.60312 11.5137 2.02078 11.3259 2.34671Z"
+										fill="#1C1C21"
+									/>
+								</svg>
 								<span>1 450,00</span>
+							</div>
+						</div>
+					</div>
+					<div class="ad-bullet-container ps5">
+						<div class="ad-bullet">
+							<img class="ad-bullet__img" src="./img/ps5.png" alt="" />
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="42"
+								height="42"
+								viewBox="0 0 42 42"
+								fill="none"
+								class="ad-bullet__crypto"
+							>
+								<g clip-path="url(#clip0_355_4351)">
+									<path
+										d="M21 42C32.598 42 42 32.598 42 21C42 9.402 32.598 0 21 0C9.402 0 0 9.402 0 21C0 32.598 9.402 42 21 42Z"
+										fill="#0098EA"
+									/>
+									<path
+										d="M28.1699 11.7207H13.8286C11.1918 11.7207 9.52045 14.5651 10.8471 16.8645L19.698 32.2056C20.2755 33.2073 21.723 33.2073 22.3005 32.2056L31.1532 16.8645C32.478 14.5688 30.8067 11.7207 28.1717 11.7207H28.1699ZM19.6908 27.605L17.7632 23.8745L13.1121 15.556C12.8053 15.0236 13.1843 14.3413 13.8268 14.3413H19.689V27.6068L19.6908 27.605ZM28.8828 15.5542L24.2335 23.8763L22.3059 27.605V14.3395H28.1681C28.8106 14.3395 29.1896 15.0218 28.8828 15.5542Z"
+										fill="white"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_355_4351">
+										<rect width="42" height="42" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+							<div class="price">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="13"
+									height="13"
+									viewBox="0 0 13 13"
+									fill="none"
+								>
+									<path
+										d="M10.8895 0H2.11004C0.495814 0 -0.527321 1.74122 0.284796 3.14884L5.70313 12.5401C6.05671 13.1533 6.94279 13.1533 7.29637 12.5401L12.7158 3.14884C13.5268 1.74347 12.5037 0 10.8906 0H10.8895ZM5.69872 9.7238L4.5187 7.44008L1.67143 2.34781C1.4836 2.02188 1.7156 1.60422 2.10894 1.60422H5.69762V9.7249L5.69872 9.7238ZM11.3259 2.34671L8.4797 7.44118L7.29968 9.7238V1.60312H10.8884C11.2817 1.60312 11.5137 2.02078 11.3259 2.34671Z"
+										fill="#1C1C21"
+									/>
+								</svg>
+								<span>500,00</span>
+							</div>
 						</div>
 					</div>
 					<div class="ad-bullet"><img src="" alt="" /><span></span></div>
-					<div class="ad-bullet"><img src="" alt="" /><span></span></div> -->
 				</section>
-				<section class="about">
+				<section class="about" id="about">
 					<div class="slider-header">
 						<h3 class="section-title">О проекте</h3>
 
@@ -327,7 +439,7 @@
 								</div>
 							</div>
 							<div class="slider-end">
-								<p>Ура ты дочитал до конца, молодэц, хвалю.</p>
+								<p>Тут может быть что нибудь интересное?</p>
 							</div>
 						</div>
 					</div>
@@ -345,7 +457,7 @@
 						доступны в Ecrow
 					</h3>
 				</section>
-				<section class="hot-it-works">
+				<section class="hot-it-works" id="how-it-works">
 					<div class="hot-it-works__title">
 						<h3 class="subtitle disabled">Как это работает?</h3>
 						<h2 class="title">
@@ -378,7 +490,7 @@
 				</section>
 			</main>
 		</div>
-		<section class="first-adopters">
+		<section class="first-adopters" id="first-adopters">
 			<h3 class="title first-adopters__title">
 				Будь среди первых <br />
 				и получи <br />
@@ -531,12 +643,56 @@
 		<script>
 			const swiper = new Swiper('.swiper', {
 				slidesPerView: 1,
-				initialSlide: 1,
 				spaceBetween: 20,
 				navigation: {
 					nextEl: '.btn-next',
 					prevEl: '.btn-prev',
 				},
+			})
+		</script>
+		<script>
+			// Функция для анимации точки
+			function animateIndicator(menu, indicator, activeClass) {
+				const items = menu.querySelectorAll('[data-index]')
+
+				function updateIndicator() {
+					const activeItem = menu.querySelector(`.${activeClass}`)
+					if (activeItem) {
+						const itemRect = activeItem.getBoundingClientRect()
+						const menuRect = menu.getBoundingClientRect()
+						const left = itemRect.left - menuRect.left + itemRect.width / 2
+
+						if (indicator.classList.contains('menu-underline')) {
+							indicator.style.left = itemRect.left - menuRect.left + 'px'
+							indicator.style.width = itemRect.width + 'px'
+						} else {
+							indicator.style.left = left + 'px'
+						}
+					}
+				}
+
+				items.forEach(item => {
+					item.addEventListener('click', () => {
+						items.forEach(i => i.classList.remove(activeClass))
+						item.classList.add(activeClass)
+						updateIndicator()
+					})
+				})
+
+				// Инициализация позиции
+				updateIndicator()
+
+				// Обновление при изменении размера окна
+				window.addEventListener('resize', updateIndicator)
+			}
+
+			// Инициализация всех меню
+			document.addEventListener('DOMContentLoaded', () => {
+				animateIndicator(
+					document.getElementById('menu'),
+					document.getElementById('dot'),
+					'active'
+				)
 			})
 		</script>
 	</body>

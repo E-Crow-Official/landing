@@ -5,6 +5,7 @@
 	--color-main: #1c1c21;
 	--color-bg: #fbfbfe;
 	--color-disabled: #a3a1aa;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -27,20 +28,44 @@ a {
 	color: #a3a1aa;
 }
 
+.header-container {
+	z-index: 100;
+	position: fixed;
+	padding: 20px 40px;
+	background: #fff;
+	width: 100%;
+	top: 0;
+}
+
 .header {
+	position: sticky;
 	display: grid;
-	grid-template-columns: 183px auto 183px;
+	grid-template-columns: 250px auto 250px;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.header__container {
+.header__left {
 	display: flex;
 	align-items: center;
 	gap: 50px;
 }
 
+.header__buttons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.header__button {
+	padding: 6px 10px;
+	border-radius: 50px;
+	border: 1.5px solid var(--Light-grey-btn, #e1e1e9);
+}
+
 .nav {
+	position: relative;
 	margin: 0 auto;
 }
 
@@ -51,6 +76,17 @@ a {
 	gap: 42px;
 }
 
+.nav__dot {
+	position: absolute;
+	bottom: -10px;
+	width: 4px;
+	height: 4px;
+	background-color: #000000;
+	border-radius: 50%;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateX(-50%);
+}
+
 .lang-switcher {
 	display: flex;
 	align-items: center;
@@ -58,7 +94,8 @@ a {
 }
 
 .hero-section {
-	margin-top: 103px;
+	position: relative;
+	margin-top: 175px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -80,20 +117,50 @@ a {
 	text-transform: uppercase;
 }
 
-.app-preview {
+.preview-container {
 	margin: 57px 0 79px 0;
+}
+
+.ad-bullet-container {
+	top: -3%;
+	left: 6%;
+	position: absolute;
+}
+
+.ad-bullet-container.ps5 {
+	top: 6%;
+	right: 5%;
+	left: auto;
 }
 
 .ad-bullet {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 232px;
+	width: 194px;
+	border-radius: 100px;
+	background: var(--Light-grey-bg, #f4f4fb);
+}
+
+.ad-bullet__img {
+	width: 170px;
+	height: 170px;
+	object-fit: contain;
+}
+
+.ad-bullet__crypto {
+	position: absolute;
+	top: 5%;
+	right: 5%;
 }
 
 .price {
 	position: absolute;
 	left: 50%;
-	bottom: 10%;
+	bottom: 5%;
 	transform: translate(-50%, -50%);
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .about {
@@ -152,6 +219,7 @@ a {
 
 .swiper.custom {
 	overflow: visible;
+	margin-left: 0;
 }
 
 .cards-container {
@@ -265,6 +333,7 @@ a {
 }
 
 .first-adopters {
+	height: 110vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -287,10 +356,10 @@ a {
 }
 
 .team-invite {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	background: #1c1c21;
 	padding-bottom: 224px;
 }
@@ -371,4 +440,11 @@ a {
 	display: flex;
 	align-items: center;
 	gap: 16px;
+}
+
+#about {
+	scroll-margin-block-start: 95px;
+}
+#how-it-works {
+	scroll-margin-block-start: 45px;
 }
