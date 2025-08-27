@@ -24,12 +24,16 @@
 	--border-color: #4a4a53;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
+	overflow-x: hidden;
 	background-color: var(--color-bg);
 	font-family: var(--font-main), sans-serif;
 	font-weight: 500;
 	font-size: 16px;
-	overflow-x: hidden;
 	color: var(--color-main);
 	transition: all 0.3s ease;
 }
