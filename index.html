@@ -64,7 +64,11 @@
 						/>
 					</svg>
 				</a>
-				<nav class="nav">
+				<button class="burger-menu" id="burger-menu" aria-label="Открыть меню">
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="nav" id="nav">
 					<ul class="nav__list" id="menu">
 						<li>
 							<a href="#about" data-index="0" class="active">О проекте</a>
@@ -76,6 +80,45 @@
 						</li>
 						<div class="nav__dot" id="dot"></div>
 					</ul>
+					<div class="nav__controls">
+						<div class="lang-switcher">
+							<button class="disabled">En</button>
+							<button>Ru</button>
+						</div>
+						<button
+							class="theme-toggle"
+							id="nav-theme-toggle"
+							aria-label="Переключить тему"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="33"
+								height="33"
+								viewBox="0 0 33 33"
+								fill="none"
+							>
+								<rect
+									x="0.75"
+									y="0.75"
+									width="31.5"
+									height="31.5"
+									rx="15.75"
+									stroke="var(--border-color)"
+									stroke-width="1.5"
+								/>
+								<mask id="path-2-inside-1_395_195" fill="white">
+									<path
+										d="M14.1303 8.33589C14.6249 8.19262 14.9079 8.87366 14.5718 9.26389C13.5924 10.4013 13 11.8813 13 13.5002C13.0001 17.09 15.9102 20.0002 19.5 20.0002C21.1195 20.0002 22.5994 19.4071 23.7368 18.4269C24.1269 18.0907 24.8079 18.3734 24.6647 18.8681C23.6396 22.4103 20.3727 25.0002 16.5 25.0002C11.8056 25.0002 8 21.1946 8 16.5002C8 12.6282 10.589 9.36165 14.1303 8.33589Z"
+									/>
+								</mask>
+								<path
+									d="M14.1303 8.33589C14.6249 8.19262 14.9079 8.87366 14.5718 9.26389C13.5924 10.4013 13 11.8813 13 13.5002C13.0001 17.09 15.9102 20.0002 19.5 20.0002C21.1195 20.0002 22.5994 19.4071 23.7368 18.4269C24.1269 18.0907 24.8079 18.3734 24.6647 18.8681C23.6396 22.4103 20.3727 25.0002 16.5 25.0002C11.8056 25.0002 8 21.1946 8 16.5002C8 12.6282 10.589 9.36165 14.1303 8.33589Z"
+									fill="var(--color-main)"
+								/>
+							</svg>
+						</button>
+						<a href="tg" class="header__button">Telegram</a>
+					</div>
 				</nav>
 				<div class="header__left">
 					<div class="lang-switcher">
@@ -113,11 +156,6 @@
 									d="M14.1303 8.33589C14.6249 8.19262 14.9079 8.87366 14.5718 9.26389C13.5924 10.4013 13 11.8813 13 13.5002C13.0001 17.09 15.9102 20.0002 19.5 20.0002C21.1195 20.0002 22.5994 19.4071 23.7368 18.4269C24.1269 18.0907 24.8079 18.3734 24.6647 18.8681C23.6396 22.4103 20.3727 25.0002 16.5 25.0002C11.8056 25.0002 8 21.1946 8 16.5002C8 12.6282 10.589 9.36165 14.1303 8.33589Z"
 									fill="var(--color-main)"
 								/>
-								<path
-									d="M13 13.5002H11.5V13.5002L13 13.5002ZM23.7368 18.4269L22.7575 17.2907L23.7368 18.4269ZM14.5718 9.26389L13.4352 8.28511L14.5718 9.26389ZM14.5718 9.26389L13.4352 8.28511C12.2304 9.68421 11.5 11.5083 11.5 13.5002H13H14.5C14.5 12.2542 14.9544 11.1184 15.7085 10.2427L14.5718 9.26389ZM13 13.5002L11.5 13.5002C11.5001 17.9183 15.0817 21.5002 19.5 21.5002V20.0002V18.5002C16.7387 18.5002 14.5001 16.2616 14.5 13.5002L13 13.5002ZM19.5 20.0002V21.5002C21.4928 21.5002 23.3171 20.7688 24.716 19.5631L23.7368 18.4269L22.7575 17.2907C21.8818 18.0454 20.7461 18.5002 19.5 18.5002V20.0002ZM24.6647 18.8681L23.2239 18.4511C22.3793 21.3692 19.6869 23.5002 16.5 23.5002V25.0002V26.5002C21.0584 26.5002 24.8998 23.4514 26.1056 19.2851L24.6647 18.8681ZM16.5 25.0002V23.5002C12.634 23.5002 9.5 20.3662 9.5 16.5002H8H6.5C6.5 22.023 10.9772 26.5002 16.5 26.5002V25.0002ZM8 16.5002H9.5C9.5 13.3138 11.6303 10.6217 14.5476 9.77666L14.1303 8.33589L13.713 6.89511C9.54774 8.1016 6.5 11.9426 6.5 16.5002H8ZM23.7368 18.4269L24.716 19.5631C24.4124 19.8249 24.043 19.8198 23.7853 19.7039C23.6425 19.6396 23.4531 19.5075 23.3198 19.2645C23.1727 18.9963 23.1529 18.6962 23.2239 18.4511L24.6647 18.8681L26.1056 19.2851C26.2481 18.7927 26.1969 18.2717 25.9502 17.8218C25.7173 17.3973 25.36 17.1227 25.0162 16.968C24.3562 16.6711 23.4513 16.6927 22.7575 17.2907L23.7368 18.4269ZM14.5718 9.26389L15.7085 10.2427C16.3061 9.54864 16.3274 8.64374 16.0303 7.98399C15.8755 7.6402 15.6009 7.28303 15.1763 7.05027C14.7264 6.80362 14.2054 6.75247 13.713 6.89511L14.1303 8.33589L14.5476 9.77666C14.3025 9.84767 14.0023 9.82792 13.7341 9.68087C13.4912 9.54771 13.359 9.35833 13.2948 9.21566C13.1789 8.95818 13.1736 8.58891 13.4352 8.28511L14.5718 9.26389Z"
-									fill="var(--color-main)"
-									mask="url(#path-2-inside-1_395_195)"
-								/>
 							</svg>
 						</button>
 						<a href="tg" class="header__button">Telegram</a>
@@ -136,6 +174,7 @@
 						ECROW — Международная <br />
 						доска
 						<svg
+							class="title__icon"
 							xmlns="http://www.w3.org/2000/svg"
 							width="74"
 							height="45"
@@ -259,7 +298,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path"
+										class="main-path"
 										d="M10.8895 0H2.11004C0.495814 0 -0.527321 1.74122 0.284796 3.14884L5.70313 12.5401C6.05671 13.1533 6.94279 13.1533 7.29637 12.5401L12.7158 3.14884C13.5268 1.74347 12.5037 0 10.8906 0H10.8895ZM5.69872 9.7238L4.5187 7.44008L1.67143 2.34781C1.4836 2.02188 1.7156 1.60422 2.10894 1.60422H5.69762V9.7249L5.69872 9.7238ZM11.3259 2.34671L8.4797 7.44118L7.29968 9.7238V1.60312H10.8884C11.2817 1.60312 11.5137 2.02078 11.3259 2.34671Z"
 										fill="#1C1C21"
 									/>
@@ -304,7 +343,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path"
+										class="main-path"
 										d="M10.8895 0H2.11004C0.495814 0 -0.527321 1.74122 0.284796 3.14884L5.70313 12.5401C6.05671 13.1533 6.94279 13.1533 7.29637 12.5401L12.7158 3.14884C13.5268 1.74347 12.5037 0 10.8906 0H10.8895ZM5.69872 9.7238L4.5187 7.44008L1.67143 2.34781C1.4836 2.02188 1.7156 1.60422 2.10894 1.60422H5.69762V9.7249L5.69872 9.7238ZM11.3259 2.34671L8.4797 7.44118L7.29968 9.7238V1.60312H10.8884C11.2817 1.60312 11.5137 2.02078 11.3259 2.34671Z"
 										fill="#1C1C21"
 									/>
@@ -349,7 +388,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path"
+										class="main-path"
 										d="M4.52006 14.5C4.13623 14.5 3.8504 14.2894 3.8504 13.8356V13.0822C2.78875 12.985 1.8251 12.6204 1.17994 12.0613C0.665444 11.6238 0.363281 11.1053 0.363281 10.6273C0.363281 10.1493 0.681777 9.86574 1.12277 9.86574C1.40043 9.86574 1.57193 9.94676 1.95576 10.3762C2.69892 11.2512 3.51557 11.64 4.58539 11.64C5.99004 11.64 6.79853 11 6.79853 9.97106C6.79853 9.17708 6.28404 8.71528 5.05089 8.41551L3.29508 7.98611C1.51477 7.57292 0.559279 6.52778 0.559279 5.02083C0.559279 3.27083 1.86593 2.05556 3.90757 1.86921V1.16435C3.90757 0.710648 4.1934 0.5 4.56906 0.5C4.94472 0.5 5.23872 0.710648 5.23872 1.16435V1.89352C6.21054 2.02315 7.08436 2.38773 7.67235 2.95486C8.14601 3.40046 8.42368 3.91088 8.42368 4.35648C8.42368 4.78588 8.12151 5.06134 7.71319 5.06134C7.38652 5.06134 7.14969 4.93171 6.81487 4.54282C6.10437 3.66782 5.43472 3.31944 4.44656 3.31944C3.20524 3.31944 2.40492 3.96759 2.40492 4.89931C2.40492 5.64468 2.93575 6.1794 3.9729 6.41435L5.70421 6.82755C7.69685 7.28935 8.63601 8.24537 8.63601 9.80903C8.63601 11.6238 7.31302 12.8715 5.17339 13.0903V13.8356C5.17339 14.2894 4.89572 14.5 4.52006 14.5Z"
 										fill="#1C1C21"
 									/>
@@ -373,7 +412,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path__arrow"
+										class="main-path__arrow"
 										d="M10.875 4.5L6.375 9L10.875 13.5"
 										stroke="black"
 										stroke-width="1.5"
@@ -391,7 +430,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path__arrow"
+										class="main-path__arrow"
 										d="M7.125 4.5L11.625 9L7.125 13.5"
 										stroke="black"
 										stroke-width="1.5"
@@ -481,33 +520,41 @@
 						доступны в Ecrow
 					</h3>
 				</section>
-				<section class="hot-it-works" id="how-it-works">
-					<div class="hot-it-works__title">
+				<section class="how-it-works" id="how-it-works">
+					<div class="how-it-works__title">
 						<h3 class="subtitle disabled">Как это работает?</h3>
 						<h2 class="title">
 							Совершайте сделки всего <br />
 							за <span class="orange-triangle">3</span> простых шага
 						</h2>
-						<div class="cards-container">
-							<div class="card card_seventh bg-biege">
-								<h3 class="card__title">
-									Создайте или найдите товар по категории или через поиск.
-								</h3>
-								<img class="card__image" src="" alt="" />
-							</div>
-							<div class="card card_eighth bg-blue white-title">
-								<h3 class="card__title">
-									Общайтесь напрямую в онлайн-чате с уведомлениями через
-									Telegram-бота.
-								</h3>
-								<img class="card__image" src="" alt="" />
-							</div>
-							<div class="card card_ninth">
-								<h3 class="card__title">
-									Средства замораживаются до подтверждения обеими сторонами,
-									спор решает арбитраж.
-								</h3>
-								<img class="card__image" src="" alt="" />
+						<div class="swiper-cards custom">
+							<div class="swiper-wrapper cards-container">
+								<div class="swiper-slide">
+									<div class="card card_seventh bg-biege">
+										<h3 class="card__title">
+											Создайте или найдите товар по категории или через поиск.
+										</h3>
+										<img class="card__image" src="" alt="" />
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card card_eighth bg-blue white-title">
+										<h3 class="card__title">
+											Общайтесь напрямую в онлайн-чате с уведомлениями через
+											Telegram-бота.
+										</h3>
+										<img class="card__image" src="" alt="" />
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card card_ninth">
+										<h3 class="card__title">
+											Средства замораживаются до подтверждения обеими сторонами,
+											спор решает арбитраж.
+										</h3>
+										<img class="card__image" src="" alt="" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -526,7 +573,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path__arrow"
+										class="main-path__arrow"
 										d="M10.875 4.5L6.375 9L10.875 13.5"
 										stroke="black"
 										stroke-width="1.5"
@@ -544,7 +591,7 @@
 									fill="none"
 								>
 									<path
-									class="main-path__arrow"
+										class="main-path__arrow"
 										d="M7.125 4.5L11.625 9L7.125 13.5"
 										stroke="black"
 										stroke-width="1.5"
@@ -557,7 +604,7 @@
 					</div>
 
 					<!-- Slider main container -->
-					<div class="swiper custom">
+					<div class="swiper roadmap custom">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
@@ -620,12 +667,52 @@
 			</main>
 		</div>
 		<section class="first-adopters" id="first-adopters">
-			<h3 class="title first-adopters__title">
-				Будь среди первых <br />
-				и получи <br />
-				уникальные бонусы!
-			</h3>
-			<a class="first-adopters__button" href="tg">Перейти в Telegram</a>
+			<div class="first-adopters__container">
+				<h3 class="title first-adopters__title">
+					Будь среди первых <br />
+					и получи <br />
+					уникальные бонусы!
+				</h3>
+				<div class="first-adopters__card first bg-blue white-title">
+					<p>
+						~0,1% комиссию <br />
+						первые 6 месяцев
+					</p>
+				</div>
+				<div class="first-adopters__card second white-title">
+					<p>
+						Специальный <br />
+						статус "Великий"
+					</p>
+					<div class="first-adopters__shapes">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="93"
+							height="92"
+							viewBox="0 0 93 92"
+							fill="none"
+						>
+							<rect x="0.5" width="92" height="92" rx="46" fill="white" />
+						</svg>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="81"
+							height="92"
+							viewBox="0 0 81 92"
+							fill="none"
+						>
+							<path
+								d="M40.5 0L52.46 25.2847L80.3372 23L64.42 46L80.3372 69L52.46 66.7153L40.5 92L28.54 66.7153L0.66283 69L16.58 46L0.66283 23L28.54 25.2847L40.5 0Z"
+								fill="#D7FF8D"
+							/>
+						</svg>
+					</div>
+				</div>
+				<div class="first-adopters__card third bg-biege">
+					<p>Ваши объявления будут на главной странице до первых 10 продаж</p>
+				</div>
+				<a class="first-adopters__button" href="tg">Перейти в Telegram</a>
+			</div>
 		</section>
 		<section class="team-invite">
 			<div class="eyes">
@@ -769,183 +856,11 @@
 				</a>
 			</div>
 		</footer>
-		<script>
-			const swiper = new Swiper('.swiper', {
-				slidesPerView: 1,
-				spaceBetween: 20,
-				navigation: {
-					nextEl: '.btn-next',
-					prevEl: '.btn-prev',
-				},
-			})
-		</script>
-		<script>
-			function animateIndicator(menu, indicator, activeClass) {
-				const items = menu.querySelectorAll('[data-index]')
-
-				function updateIndicator() {
-					const activeItem = menu.querySelector(`.${activeClass}`)
-					if (activeItem) {
-						const itemRect = activeItem.getBoundingClientRect()
-						const menuRect = menu.getBoundingClientRect()
-						const left = itemRect.left - menuRect.left + itemRect.width / 2
-
-						if (indicator.classList.contains('menu-underline')) {
-							indicator.style.left = itemRect.left - menuRect.left + 'px'
-							indicator.style.width = itemRect.width + 'px'
-						} else {
-							indicator.style.left = left + 'px'
-						}
-					}
-				}
-
-				items.forEach(item => {
-					item.addEventListener('click', () => {
-						items.forEach(i => i.classList.remove(activeClass))
-						item.classList.add(activeClass)
-						updateIndicator()
-					})
-				})
-
-				updateIndicator()
-
-				window.addEventListener('resize', updateIndicator)
-
-				return { updateIndicator, items }
-			}
-
-			function initScrollNavigation(menu, indicator, activeClass) {
-				const { updateIndicator, items } = animateIndicator(
-					menu,
-					indicator,
-					activeClass
-				)
-				const sections = Array.from(items)
-					.map(item => {
-						const href = item.getAttribute('href')
-						return document.querySelector(href)
-					})
-					.filter(Boolean)
-
-				let isScrolling = false
-
-				function updateActiveSection() {
-					if (isScrolling) return
-
-					const scrollPosition = window.scrollY + 300
-
-					let activeIndex = 0
-					for (let i = sections.length - 1; i >= 0; i--) {
-						const section = sections[i]
-						if (section && section.offsetTop <= scrollPosition) {
-							activeIndex = i
-							break
-						}
-					}
-
-					// Обновляем активное состояние
-					items.forEach((item, index) => {
-						item.classList.toggle(activeClass, index === activeIndex)
-					})
-
-					updateIndicator()
-				}
-
-				let scrollTimeout
-				window.addEventListener('scroll', () => {
-					clearTimeout(scrollTimeout)
-					scrollTimeout = setTimeout(updateActiveSection, 10)
-				})
-
-				items.forEach(item => {
-					item.addEventListener('click', () => {
-						isScrolling = true
-						setTimeout(() => {
-							isScrolling = false
-						}, 1000)
-					})
-				})
-
-				updateActiveSection()
-			}
-
-			function initHeaderThemeToggle() {
-				const headerContainer = document.querySelector('.header-container')
-				const firstAdoptersSection = document.getElementById('first-adopters')
-
-				if (!firstAdoptersSection) return
-
-				function updateHeaderTheme() {
-					const scrollPosition = window.scrollY
-					const sectionTop = firstAdoptersSection.offsetTop
-					const triggerPoint = sectionTop - window.innerHeight + 640
-
-					if (scrollPosition >= triggerPoint) {
-						headerContainer.classList.add('dark-header')
-					} else {
-						headerContainer.classList.remove('dark-header')
-					}
-				}
-
-				let scrollTimeout
-				window.addEventListener('scroll', () => {
-					clearTimeout(scrollTimeout)
-					scrollTimeout = setTimeout(updateHeaderTheme, 10)
-				})
-
-				updateHeaderTheme()
-			}
-
-			function initThemeToggle() {
-				const themeToggle = document.getElementById('theme-toggle')
-				const html = document.documentElement
-
-				function getPreferredTheme() {
-					const savedTheme = localStorage.getItem('theme')
-					if (savedTheme) {
-						return savedTheme
-					}
-					return window.matchMedia('(prefers-color-scheme: dark)').matches
-						? 'dark'
-						: 'light'
-				}
-
-				function setTheme(theme) {
-					if (theme === 'dark') {
-						html.setAttribute('data-theme', 'dark')
-					} else {
-						html.removeAttribute('data-theme')
-					}
-					localStorage.setItem('theme', theme)
-				}
-
-				const currentTheme = getPreferredTheme()
-				setTheme(currentTheme)
-
-				themeToggle.addEventListener('click', () => {
-					const currentTheme = html.getAttribute('data-theme')
-					const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
-					setTheme(newTheme)
-				})
-
-				window
-					.matchMedia('(prefers-color-scheme: dark)')
-					.addEventListener('change', e => {
-						if (!localStorage.getItem('theme')) {
-							setTheme(e.matches ? 'dark' : 'light')
-						}
-					})
-			}
-
-			document.addEventListener('DOMContentLoaded', () => {
-				initScrollNavigation(
-					document.getElementById('menu'),
-					document.getElementById('dot'),
-					'active'
-				)
-				initThemeToggle()
-				initHeaderThemeToggle()
-			})
-		</script>
+		<script src="js/swiper-init.js"></script>
+		<script src="js/navigation.js"></script>
+		<script src="js/theme-toggle.js"></script>
+		<script src="js/cards-slider.js"></script>
+		<script src="js/burger-menu.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
