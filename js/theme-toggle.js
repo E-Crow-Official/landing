@@ -2,27 +2,27 @@ function initHeaderThemeToggle() {
 	const headerContainer = document.querySelector('.header-container')
 	const firstAdoptersSection = document.getElementById('first-adopters')
 
-	if (!firstAdoptersSection) return
+	if (!headerContainer || !firstAdoptersSection) return
 
-	function updateHeaderTheme() {
-		const scrollPosition = window.scrollY
-		const sectionTop = firstAdoptersSection.offsetTop
-		const triggerPoint = sectionTop - window.innerHeight + 640
+	const height = window.innerHeight - headerContainer.clientHeight - 40
 
-		if (scrollPosition >= triggerPoint) {
-			headerContainer.classList.add('dark-header')
-		} else {
-			headerContainer.classList.remove('dark-header')
+	const Fobserver = new IntersectionObserver(
+		(entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					headerContainer.classList.add('dark-header')
+				} else {
+					headerContainer.classList.remove('dark-header')
+				}
+			})
+		},
+		{
+			rootMargin: `0px 0px -${height}px 0px`,
+			threshold: 0.05
 		}
-	}
+	)
 
-	let scrollTimeout
-	window.addEventListener('scroll', () => {
-		clearTimeout(scrollTimeout)
-		scrollTimeout = setTimeout(updateHeaderTheme, 10)
-	})
-
-	updateHeaderTheme()
+	Fobserver.observe(firstAdoptersSection)
 }
 
 function initThemeToggle() {

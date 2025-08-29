@@ -1,3 +1,5 @@
+import { initComingSoonAnimation, initDraggableCards, initAdBulletLevitation, initEyeAnimation } from './animations.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	initScrollNavigation(
 		document.getElementById('menu'),
@@ -8,4 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	initHeaderThemeToggle()
 	initCardsSlider()
 	initBurgerMenu()
+	initHeaderHide()
+	initComingSoonAnimation()
+	initDraggableCards()
+	initAdBulletLevitation()
+	initEyeAnimation()
 })

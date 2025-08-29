@@ -58,7 +58,11 @@ a {
 	background: var(--color-bg);
 	width: 100%;
 	top: 0;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.header-container.hidden {
+	transform: translateY(-100%);
 }
 
 .main-path {
@@ -78,11 +82,11 @@ a {
 	color: #fbfbfe;
 }
 
-.header-container.dark-header .nav__dot {
+.header-container.dark-header .nav:not(.active) .nav__dot {
 	background-color: #fbfbfe;
 }
 
-.header-container.dark-header a {
+.header-container.dark-header .nav:not(.active) a {
 	color: #fbfbfe;
 }
 
@@ -98,6 +102,22 @@ a {
 .header-container.dark-header .theme-toggle svg path {
 	fill: #fbfbfe;
 }
+
+#nav svg path {
+	fill: var(--color-main);
+	transition: fill 0.3s ease;
+}
+
+#nav .header__button {
+	border-color: var(--border-color);
+	color: var(--color-main);
+}
+
+#nav .theme-toggle svg rect {
+	stroke: var(--border-color);
+}
+
+
 
 .header {
 	position: sticky;
@@ -592,6 +612,7 @@ a {
 	background-position: bottom right 5%;
 	bottom: 20%;
 	right: 5%;
+	color: #1C1C21;
 }
 
 .first-adopters__card.third > p {
@@ -609,12 +630,14 @@ a {
 }
 
 .team-invite {
-	height: 100vh;
+	height: calc(100vh - 73px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: #1c1c21;
 	padding-bottom: 224px;
+	margin-bottom: -1px;
+	margin-top: -1px;
 }
 
 .eyes {
@@ -676,7 +699,7 @@ a {
 	justify-content: space-between;
 	align-items: flex-end;
 	background-color: #1c1c21;
-	padding: 0 40px 40px 40px;
+	padding: 0 40px 42px 40px;
 }
 
 .footer__button {
@@ -819,7 +842,7 @@ a {
 		display: none;
 	}
 	.caregory-bullet {
-		transform: scale(0.8);
+		scale: 0.8;
 	}
 	.caregory-bullet.medium.second {
 		left: 20%;
@@ -876,12 +899,12 @@ a {
 
 	.nav {
 		position: fixed;
-		top: 80px;
+		top: 76px;
 		right: -100%;
 		width: 100%;
-		height: calc(100vh - 80px);
+		height: calc(100vh - 76px);
 		background-color: var(--color-bg);
-		transition: right 0.3s ease;
+		transition: all 0.3s ease;
 		z-index: 999;
 		padding: 40px;
 		box-sizing: border-box;
@@ -983,7 +1006,7 @@ body.menu-open {
 	}
 
 	.caregory-bullet {
-		transform: scale(0.4);
+		scale: 0.4;
 	}
 
 	.caregory-bullet.wheel {
@@ -1062,5 +1085,32 @@ body.menu-open {
 
 	.cards-container {
 		gap: 0;
+	}
+	.pupil {
+		width: 19vw;
+	}
+	.eyes {
+		margin: 0 25px 105px 25px;
+	}
+	.title.team-invite__title {
+		font-size: 40px;
+		margin: 0 24px 40px 24px;
+	}
+	.team-invite {
+		height: calc(100vh - 53px);
+	}
+	.team-invite__input {
+		max-width: 274px;
+		font-size: 24px;
+		padding: 10px 16px;
+	}
+	.team-invite__form {
+		gap: 8px;
+	}
+	.team-invite__button {
+		padding: 0 2px;
+	}
+	.footer {
+		padding: 0 20px 22px 20px;
 	}
 }

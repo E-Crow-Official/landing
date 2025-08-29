@@ -10,7 +10,7 @@ function initCardsSlider() {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					initialSlide: 0,
-					effect: 'coverflow',
+					effect: 'flip',
 					flipEffect: {
 						slideShadows: false,
 					},
