@@ -974,7 +974,7 @@ a {
 		gap: 10px;
 	}
 
-	.nav__controls .lang-switcher button {
+	.nav__controls .lang-switcher a {
 		padding: 8px 16px;
 		border: 1px solid var(--border-color);
 		background: none;
@@ -986,7 +986,7 @@ a {
 		font-size: 14px;
 	}
 
-	.nav__controls .lang-switcher button.disabled {
+	.nav__controls .lang-switcher a.disabled {
 		color: var(--color-disabled);
 		cursor: default;
 	}
