@@ -5,4 +5,7 @@ const swiper = new Swiper('.swiper', {
 		nextEl: '.btn-next',
 		prevEl: '.btn-prev',
 	},
+	mousewheel: {
+		forceToAxis: true,
+	}
 })

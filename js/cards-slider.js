@@ -18,6 +18,15 @@ function initCardsSlider() {
 					autoplay: {
 						delay: 2000,
 					},
+					pauseOnMouseEnter: true,
+					on: {
+						touchStart: function() {
+							this.autoplay.stop()
+						},
+						touchEnd: function() {
+							this.autoplay.start()
+						}
+					}
 				})
 			}
 		} else {

@@ -58,7 +58,8 @@ a {
 	background: var(--color-bg);
 	width: 100%;
 	top: 0;
-	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease-in-out;
+	transition: background-color 0.3s ease, color 0.3s ease,
+		transform 0.3s ease-in-out;
 }
 
 .header-container.hidden {
@@ -116,8 +117,6 @@ a {
 #nav .theme-toggle svg rect {
 	stroke: var(--border-color);
 }
-
-
 
 .header {
 	position: sticky;
@@ -218,6 +217,14 @@ a {
 	margin: 57px 0 79px 0;
 }
 
+.app-preview {
+	height: 554.992px;
+}
+
+.dots-container {
+	position: absolute;
+}
+
 .ad-bullet-container {
 	top: -3%;
 	left: 6%;
@@ -307,7 +314,13 @@ a {
 	align-items: center;
 	flex-shrink: 0;
 	border-radius: 100px;
-	background: var(--bullet-bg);
+	border-radius: 100px;
+	border: 1.5px solid var(--border-color);
+	transition: all 0.3s ease;
+}
+
+.arrow:hover {
+	background: var(--border-color);
 }
 
 .slider-end {
@@ -321,16 +334,19 @@ a {
 .swiper {
 	width: 325px;
 	height: 458px;
+	user-select: none;
 }
 
 .swiper.roadmap {
 	width: 325px;
 	height: 318px;
+	user-select: none;
 }
 
 .swiper-cards {
 	width: 100%;
 	height: 458px;
+	user-select: none;
 }
 
 .swiper-cards > .swiper-wrapper > .swiper-slide {
@@ -459,6 +475,7 @@ a {
 	border-radius: 95.876px;
 	background: var(--bullet-bg);
 	transition: all 0.3s ease;
+	background-size: contain;
 }
 
 .caregory-bullet.big {
@@ -612,7 +629,7 @@ a {
 	background-position: bottom right 5%;
 	bottom: 20%;
 	right: 5%;
-	color: #1C1C21;
+	color: #1c1c21;
 }
 
 .first-adopters__card.third > p {
