@@ -78,6 +78,14 @@ a {
 	fill: #fbfbfe;
 }
 
+.header-container.dark-header a {
+	color: #fbfbfe;
+}
+
+.header-container.dark-header a.disabled {
+	color: #a3a1aa;
+}
+
 .header-container.dark-header {
 	background: #363640;
 	color: #fbfbfe;
