@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
+		<script>
+			;(function () {
+				const savedTheme = localStorage.getItem('theme')
+				const prefersDark = window.matchMedia(
+					'(prefers-color-scheme: dark)'
+				).matches
+				const theme = savedTheme || (prefersDark ? 'dark' : 'light')
+				if (theme === 'dark') {
+					document.documentElement.setAttribute('data-theme', 'dark')
+				}
+			})()
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>
@@ -33,7 +45,7 @@
 			property="og:description"
 			content="Безопасная международная доска объявлений внутри Telegram с мгновенными криптовалютными переводами. P2P торговля без посредников."
 		/>
-		<meta property="og:image" content="https://ecrow.ru/img/og-image.jpg" />
+		<meta property="og:image" content="./img/logo.png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -560,7 +572,6 @@
 										Покупка и продажа из-за рубежа — просто и быстро, как заказ
 										еды через приложение.
 									</h3>
-
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -582,8 +593,8 @@
 							<div class="swiper-slide">
 								<div class="card card_fourth bg-dark white-title">
 									<h3 class="card__title">
-										Полный контрольи прозрачность сделкис возможностью арбитража
-										при споре.
+										Полный контроль и прозрачность сделки с возможностью
+										арбитража при споре.
 									</h3>
 								</div>
 							</div>
@@ -598,8 +609,8 @@
 							<div class="swiper-slide">
 								<div class="card card_sixth bg-biege">
 									<h3 class="card__title">
-										Новый уровень свободы в P2P-торговле — <br />без
-										посредникови бюрократии.
+										Новый уровень свободы в P2P-торговле — <br />без посредников
+										и бюрократии.
 									</h3>
 								</div>
 							</div>
@@ -982,6 +993,7 @@
 		<script src="js/cards-slider.js"></script>
 		<script src="js/burger-menu.js"></script>
 		<script src="js/header-hide.js"></script>
+		<script src="js/tg.js"></script>
 		<script type="module" src="js/animations.js"></script>
 		<script type="module" src="js/main.js"></script>
 	</body>
